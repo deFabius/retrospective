@@ -1,0 +1,103 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+html, body, #root, .App, .App-body {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.App-body {
+  padding-top: 6rem;
+  box-sizing: border-box;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.card {
+  max-width: 400px;
+  height: 80%;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+
+.card-content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.WhiteBoard {
+  width: 100%;
+  height: 100%;
+}
+
+.WhiteBoard-sector {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  float: left;
+}
+
+.WhiteBoard-interface {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+}
+
+.WhiteBoard-interface > button {
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: -30px;
+  margin-top: -30px;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+}
