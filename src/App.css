@@ -1,6 +1,9 @@
 html {
   font-size: 62.5%;
 }
+ * {
+  box-sizing: border-box;
+}
 
 body {
   font-size: 14px;
@@ -18,6 +21,7 @@ h1 {
 html, body, #root, .App, .App-body {
   width: 100%;
   height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .App {
@@ -40,7 +44,6 @@ html, body, #root, .App, .App-body {
 
 .App-body {
   padding-top: 6rem;
-  box-sizing: border-box;
 }
 
 .App-intro {
@@ -71,6 +74,7 @@ html, body, #root, .App, .App-body {
 .WhiteBoard {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .WhiteBoard-sector {
@@ -79,6 +83,7 @@ html, body, #root, .App, .App-body {
   border: 1px solid black;
   box-sizing: border-box;
   float: left;
+  position: relative;
 }
 
 .WhiteBoard-interface {
@@ -100,4 +105,133 @@ html, body, #root, .App, .App-body {
   height: 60px;
   border-radius: 50%;
   display: block;
+}
+
+.icon {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.icon svg {
+  height: 1em;
+  width: 1em;
+}
+
+.icon.--svg-baseline svg {
+  bottom: -0.125em;
+  position: absolute;
+}
+
+#modal-root {
+  position: relative;
+  z-index: 999;
+}
+
+.modal {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+
+.pinBtn {
+  display: block;
+  background-color: white;
+  position: absolute;
+}
+
+#pinToDidWell {
+  top: 25%;
+  left: 25%;
+}
+#pinToCanDoBetter {
+  top: 25%;
+  left: 75%;
+}
+#pinToPuzzledUs {
+  top: 75%;
+  left: 25%;
+}
+#pinToTryNext {
+  top: 75%;
+  left: 75%;
+}
+
+.post-it-note {
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:20%;
+  width:20%;
+  padding:1em;
+  -moz-box-shadow:5px 5px 10px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 10px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 10px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+
+.WhiteBoard .post-it-note {
+  -webkit-transform:rotate(-6deg);
+  -o-transform:rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+  position:absolute;
+  z-index:5;
+}
+
+.WhiteBoard .post-it-note:nth-child(even) {
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:absolute;
+  top:5px;
+}
+.WhiteBoard .post-it-note:nth-child(3n) {
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:absolute;
+  top:-5px;
+}
+.WhiteBoard .post-it-note:nth-child(5n) {
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:absolute;
+  top:-10px;
+}
+
+.WhiteBoard .post-it-note:nth-child(2n+2) {
+  left: calc((100% * .1) - (150px * .1));
+  top:5px;
+}
+
+.WhiteBoard .post-it-note:nth-child(3n+3) {
+  left: calc((100% * .2) - (150px * .2));
+  top:5px;
+}
+
+.WhiteBoard .post-it-note:nth-child(4n+4) {
+  left: calc((100% * .3) - (150px * .3));
+  top:5px;
+}
+
+.WhiteBoard .post-it-note:hover {
+  transform-origin: 50% 50%;
+  -webkit-transform:rotate(0) scale(5) translateX(50%) translateY(10px);
+  -o-transform:rotate(0) scale(5);
+  -moz-transform:rotate(0) scale(5);
+  z-index: 10;
 }
